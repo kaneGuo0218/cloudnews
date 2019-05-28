@@ -1,0 +1,32 @@
+SELECT
+	b.user_group_activity_team_info_id
+FROM
+	user_match_reginfo a
+	LEFT JOIN order_reginfo b ON a.user_match_reginfo_ID = b.user_match_reginfo_ID
+	LEFT JOIN user_group_activity_team_info c ON b.user_group_activity_team_info_id = c.user_group_activity_team_info_id
+WHERE
+	a.operator_type = 2
+	AND a.operator_id = 44131
+	AND c.group_activity_info_id = 3
+
+
+  SELECT
+	user_group_activity_team_info_id,
+	group_activity_info_id,
+	activity_team_name,
+	sign_count,
+	( CASE WHEN user_group_activity_team_info_id = 1 THEN 1 WHEN user_group_activity_team_info_id = 3 THEN 1 ELSE 0 END ) AS signOk
+FROM
+	user_group_activity_team_info
+WHERE
+	is_delete = 0
+	AND group_team_state = 1
+	AND group_activity_info_id = 3
+ORDER BY
+	signOk DESC,
+	create_time
+	LIMIT 1,10
+
+
+  match/getMatchWithService 获取赛事项目及服务组合
+  signup/calculatePriceEasy   计算价格
