@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://10.8.0.10:3306/cloud_news?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: 123456
+      stat-view-servlet:
+        #管理界面用户吗
+        login-username: admin
+        #管理界面密码
+        login-password: admin
