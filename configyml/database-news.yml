@@ -1,4 +1,5 @@
 spring:
+  ymlversion: 1.1
   datasource:
     druid:
       url: jdbc:mysql://10.8.0.10:3306/cloud_news?useUnicode=true&characterEncoding=UTF-8&useSSL=false
