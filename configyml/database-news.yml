@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     # 填写你数据库的url、登录名、密码和数据库名
     url: jdbc:mysql://10.8.0.10:3306/databaseName?useSSL=false&characterEncoding=utf8
-    username: root
+    username: runnar
     password: 123456
     druid:
       # 连接池的配置信息
