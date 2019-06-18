@@ -5,3 +5,10 @@ spring:
     name: article
   profiles:
     active: dev
+  rabbitmq:
+    host: 10.8.0.78
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    publisherConfirms: true
