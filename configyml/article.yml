@@ -12,3 +12,7 @@ spring:
     password: guest
     virtualHost: /
     publisherConfirms: true
+
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: com.news.client.article.entity
